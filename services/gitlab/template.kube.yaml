@@ -1,0 +1,79 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-4.6.2
+
+# NOTE: The namespace sharing for a pod has been modified by the user and is not the same as the
+# default settings for kubernetes. This can lead to unexpected behavior when running the generated
+# kube yaml in a kubernetes cluster.
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-06-10T05:34:32Z"
+  labels:
+    app: podgitlab
+  name: podgitlab
+spec:
+  containers:
+    - env:
+        - name: GITLAB_OMNIBUS_CONFIG
+          value: |
+            external_url 'http://{{=env.DOMAIN}}'
+            gitlab_rails['initial_root_password'] = File.read('/run/secrets/gitlab_root_password').gsub("\n", "")
+        - name: HOSTNAME
+          value: "{{=env.DOMAIN}}"
+      image: docker.io/gitlab/gitlab-ce:latest
+      name: gitlab
+      ports:
+        - containerPort: 80
+          hostPort: 8090
+      volumeMounts:
+        - mountPath: /etc/gitlab
+          name: gitlab-data-config-host-0
+        - mountPath: /var/log/gitlab
+          name: gitlab-data-logs-host-1
+        - mountPath: /var/opt/gitlab
+          name: gitlab-data-data-host-2
+        - mountPath: /srv/gitlab-runner/config
+          name: gitlab-runner-data-home-host-0
+        - mountPath: /run/secrets/gitlab_root_password
+          name: gitlab-root_password.txt-host-3
+          readOnly: true
+    - args:
+        - run
+        - --user=gitlab-runner
+        - --working-directory=/home/gitlab-runner
+      image: docker.io/gitlab/gitlab-runner:alpine
+      name: gitlabgitlab-runner1
+      volumeMounts:
+        - mountPath: /srv/gitlab-runner/config
+          name: gitlab-runner-data-home-host-0
+        - mountPath: /etc/gitlab-runner
+          name: gitlab-runner-data-etc-host-1
+  hostname: "{{=env.DOMAIN}}"
+  volumes:
+    - hostPath:
+        path: "{{=env.SERVICE_DIR}}/data/config"
+        type: Directory
+      name: gitlab-data-config-host-0
+    - hostPath:
+        path: "{{=env.SERVICE_DIR}}/data/logs"
+        type: Directory
+      name: gitlab-data-logs-host-1
+    - hostPath:
+        path: "{{=env.SERVICE_DIR}}/data/data"
+        type: Directory
+      name: gitlab-data-data-host-2
+    - hostPath:
+        path: "{{=env.SERVICE_DIR}}/root_password.txt"
+        type: File
+      name: gitlab-root_password.txt-host-3
+    - hostPath:
+        path: "{{=env.SERVICE_DIR}}/runner-data/config"
+        type: Directory
+      name: gitlab-runner-data-config-host-0
+    - hostPath:
+        path: "{{=env.SERVICE_DIR}}/runner-data/etc"
+        type: Directory
+      name: gitlab-runner-data-etc-host-1

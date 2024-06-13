@@ -1,0 +1,16 @@
+{
+	"cSpell.words": [
+		"caddyfile"
+	],
+	"python.analysis.typeCheckingMode": "basic",
+	"python.analysis.autoImportCompletions": true,
+	"deno.enable": true,
+	"deno.future": true,
+	"deno.unstable": true,
+	"deno.lint": true,
+	"eslint.enable": false,
+	"editor.tabSize": 2,
+	"files.associations": {
+		"*.ejs": "yaml"
+	}
+}

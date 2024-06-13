@@ -1,0 +1,7 @@
+.*.yaml
+.*.caddy
+.env
+*password.txt
+*passwords.txt
+.bin
+*.bin

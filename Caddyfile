@@ -1,0 +1,5 @@
+{
+	acme_dns cloudflare {env.CF_API_TOKEN}
+}
+
+import ./.bin/derived.caddy

@@ -1,0 +1,42 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-4.6.2
+
+# NOTE: If you generated this yaml from an unprivileged and rootless podman container on an SELinux
+# enabled system, check the podman generate kube man page for steps to follow to ensure that your pod/container
+# has the right permissions to access the volumes added.
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    io.podman.annotations.ulimit: nofile=1048576:1048576
+  creationTimestamp: "2024-06-09T10:58:20Z"
+  labels:
+    app: minecraft-atm9-pod
+  name: minecraft-atm9-pod
+spec:
+  containers:
+    - args:
+        - sh
+      env:
+        - name: EULA
+          value: "TRUE"
+      image: docker.io/itzg/minecraft-server:latest
+      name: minecraft-atm9
+      ports:
+        - containerPort: 25565
+          hostPort: 25565
+      resources:
+        limits:
+          memory: 7812500Ki
+      tty: true
+      volumeMounts:
+        - mountPath: /data
+          name: hosting-minecraft-atm9-host-0
+  hostname: "{{=env.DOMAIN}}"
+  volumes:
+    - hostPath:
+        path: "{{=env.SERVICE_DIR}}/data/minecraft-atm9"
+        type: Directory
+      name: hosting-minecraft-atm9-host-0
