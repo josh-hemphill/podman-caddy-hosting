@@ -1,6 +1,7 @@
 {
 	"cSpell.words": [
-		"caddyfile"
+		"caddyfile",
+		"nessicary"
 	],
 	"python.analysis.typeCheckingMode": "basic",
 	"python.analysis.autoImportCompletions": true,
