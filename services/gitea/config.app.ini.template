@@ -1,0 +1,45 @@
+[DEFAULT]
+APP_NAME       = Gitea
+
+[ui.meta]
+AUTHOR         = Gitea
+DESCRIPTION    = Family Git Server
+
+[database]
+DB_TYPE        = sqlite3
+
+[mailer]
+ENABLED        = true
+SMTP_ADDR      = smtp-relay.gmail.com
+SMTP_PORT      = 587
+FROM           = example@example.com
+USER           = example@example.com
+PASSWD         = `some password`
+SUBJECT_PREFIX = [Gitea]
+
+[email.incoming]
+ENABLED                 = true
+REPLY_TO_ADDRESS        = git+%{token}@example.com
+
+[openid]
+ENABLE_OPENID_SIGNIN    = true
+ENABLE_OPENID_SIGNUP    = true
+
+[oauth2_client]
+ENABLE_AUTO_REGISTAION  = true
+UPDATE_AVATAR           = true
+
+[service]
+REGISTER_MANUAL_CONFIRM = true
+REQUIRE_SIGNIN_VIEW     = true
+ENABLE_NOTIFY_MAIL      = true
+
+[service.explore]
+REQUIRE_SIGNIN_VIEW     = true
+
+[session]
+DOMAIN									= example.com
+
+[cron]
+ENABLED								  = true
+

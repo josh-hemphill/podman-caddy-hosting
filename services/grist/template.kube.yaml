@@ -7,8 +7,8 @@ kind: Pod
 metadata:
   creationTimestamp: "2024-06-09T11:46:09Z"
   labels:
-    app: testpod
-  name: testpod
+    app: podgrist
+  name: podgrist
 spec:
   containers:
     - args:
@@ -22,12 +22,12 @@ spec:
           value: gvisor
         - name: APP_HOME_URL
           value: "https://{{=env.DOMAIN}}"
-        - name: GRIST_SINGLE_ORG
-          value: team
+        - name: GRIST_FORCE_LOGIN
+          value: "true"
         - name: COOKIE_MAX_AGE
           value: "31536000"
         - name: GRIST_HIDE_UI_ELEMENTS
-          value: "billing,multiSite"
+          value: "billing"
         - name: GRIST_PAGE_TITLE_SUFFIX
           value: "_blank"
         - name: GRIST_TELEMETRY_LEVEL
@@ -35,7 +35,7 @@ spec:
         - name: APP_STATIC_INCLUDE_CUSTOM_CSS
           value: "true"
         - name: GRIST_WIDGET_LIST_URL
-          value: "https://{{=env.DOMAIN}}/widgets/manifest.json"
+          value: "./widgets/manifest.json"
       image: docker.io/gristlabs/grist:latest
       name: grist
       ports:
