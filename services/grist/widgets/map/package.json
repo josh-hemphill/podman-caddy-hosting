@@ -6,7 +6,7 @@
   "grist": [
     {
       "name": "Map",
-      "url": "https://gristlabs.github.io/grist-widget/map/index.html",
+      "url": "/v/unknown/widgets/map/index.html",
       "widgetId": "@gristlabs/widget-map#map",
       "published": true,
       "accessLevel": "read table",

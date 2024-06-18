@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "grist": {
     "name": "Dropbox Embedder",
-    "url": "https://gristlabs.github.io/grist-widget/dropbox-embed/index.html",
+    "url": "/v/unknown/widgets/dropbox-embed/index.html",
     "widgetId": "@gristlabs/dropbox-embed",
     "published": true,
     "accessLevel": "read table",

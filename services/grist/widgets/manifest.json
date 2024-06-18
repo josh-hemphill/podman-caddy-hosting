@@ -1,7 +1,7 @@
 [
   {
     "name": "Action button",
-    "url": "./widgets/actionbutton/index.html",
+    "url": "/v/unknown/widgets/actionbutton/index.html",
     "widgetId": "@gristlabs/widget-actionbutton",
     "published": true,
     "accessLevel": "full",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Calendar",
-    "url": "./widgets/calendar/index.html",
+    "url": "/v/unknown/widgets/calendar/index.html",
     "widgetId": "@gristlabs/widget-calendar",
     "published": true,
     "accessLevel": "full",
@@ -20,13 +20,13 @@
         "maxcdn.bootstrapcdn.com"
       ],
       "entrypoints": [
-        "./widgets/calendar/i18n/"
+        "/v/unknown/widgets/calendar/i18n/"
       ]
     }
   },
   {
     "name": "Copy to clipboard",
-    "url": "./widgets/clipboard/index.html",
+    "url": "/v/unknown/widgets/clipboard/index.html",
     "widgetId": "@gristlabs/widget-clipboard",
     "published": true,
     "accessLevel": "read table",
@@ -34,7 +34,7 @@
   },
   {
     "name": "Dropbox Embedder",
-    "url": "./widgets/dropbox-embed/index.html",
+    "url": "/v/unknown/widgets/dropbox-embed/index.html",
     "widgetId": "@gristlabs/dropbox-embed",
     "published": true,
     "accessLevel": "read table",
@@ -42,7 +42,7 @@
   },
   {
     "name": "Flashcards",
-    "url": "./widgets/flashcards/index.html",
+    "url": "/v/unknown/widgets/flashcards/index.html",
     "widgetId": "@gristlabs/flashcards",
     "published": true,
     "accessLevel": "read table",
@@ -50,7 +50,7 @@
   },
   {
     "name": "Inspect Record",
-    "url": "./widgets/inspect/onRecord.html",
+    "url": "/v/unknown/widgets/inspect/onRecord.html",
     "widgetId": "@gristlabs/widget-inspect#onRecord",
     "published": true,
     "accessLevel": "read table",
@@ -58,7 +58,7 @@
   },
   {
     "name": "Inspect Table",
-    "url": "./widgets/inspect/onRecords.html",
+    "url": "/v/unknown/widgets/inspect/onRecords.html",
     "widgetId": "@gristlabs/widget-inspect#onRecords",
     "published": true,
     "accessLevel": "read table",
@@ -66,21 +66,21 @@
   },
   {
     "name": "Inspect Options",
-    "url": "./widgets/inspect/onOptions.html",
+    "url": "/v/unknown/widgets/inspect/onOptions.html",
     "widgetId": "@gristlabs/widget-inspect#onOptions",
     "published": true,
     "renderAfterReady": true
   },
   {
     "name": "Inspect API",
-    "url": "./widgets/inspect/api.html",
+    "url": "/v/unknown/widgets/inspect/api.html",
     "widgetId": "@gristlabs/widget-inspect#api",
     "published": true,
     "renderAfterReady": true
   },
   {
     "name": "Invoices",
-    "url": "./widgets/invoices",
+    "url": "/v/unknown/widgets/invoices",
     "widgetId": "@gristlabs/widget-invoices",
     "published": true,
     "accessLevel": "read table",
@@ -88,7 +88,7 @@
   },
   {
     "name": "Map",
-    "url": "./widgets/map/index.html",
+    "url": "/v/unknown/widgets/map/index.html",
     "widgetId": "@gristlabs/widget-map#map",
     "published": true,
     "accessLevel": "read table",
@@ -96,7 +96,7 @@
   },
   {
     "name": "Markdown",
-    "url": "./widgets/markdown",
+    "url": "/v/unknown/widgets/markdown",
     "widgetId": "@gristlabs/widget-markdown",
     "published": true,
     "accessLevel": "full",
@@ -104,7 +104,7 @@
   },
   {
     "name": "Notepad",
-    "url": "./widgets/notepad",
+    "url": "/v/unknown/widgets/notepad",
     "widgetId": "@gristlabs/widget-notepad",
     "published": true,
     "accessLevel": "full",
@@ -112,7 +112,7 @@
   },
   {
     "name": "Pivot Table",
-    "url": "./widgets/pivottable/index.html",
+    "url": "/v/unknown/widgets/pivottable/index.html",
     "widgetId": "@gristlabs/widget-pivottable",
     "published": true,
     "accessLevel": "read table",
@@ -120,7 +120,7 @@
   },
   {
     "name": "Print labels",
-    "url": "./widgets/printlabels/index.html",
+    "url": "/v/unknown/widgets/printlabels/index.html",
     "widgetId": "@gristlabs/widget-printlabels",
     "published": true,
     "accessLevel": "read table",
@@ -128,7 +128,7 @@
   },
   {
     "name": "Purchase orders",
-    "url": "./widgets/purchase-orders",
+    "url": "/v/unknown/widgets/purchase-orders",
     "widgetId": "@gristlabs/widget-purchase-orders",
     "published": true,
     "accessLevel": "read table",
@@ -136,7 +136,7 @@
   },
   {
     "name": "QR Code",
-    "url": "./widgets/qrcode/index.html",
+    "url": "/v/unknown/widgets/qrcode/index.html",
     "widgetId": "@gristlabs/widget-qrcode",
     "published": true,
     "accessLevel": "read table",
@@ -144,7 +144,7 @@
   },
   {
     "name": "HTML viewer",
-    "url": "./widgets/renderhtml/index.html",
+    "url": "/v/unknown/widgets/renderhtml/index.html",
     "widgetId": "@gristlabs/widget-renderhtml",
     "published": true,
     "accessLevel": "read table",
@@ -152,7 +152,7 @@
   },
   {
     "name": "Grist Video Player",
-    "url": "./widgets/rendervideo/index.html",
+    "url": "/v/unknown/widgets/rendervideo/index.html",
     "widgetId": "@gristlabs/widget-rendervideo",
     "published": true,
     "accessLevel": "read table",
@@ -160,7 +160,7 @@
   },
   {
     "name": "Image viewer",
-    "url": "./widgets/viewer/index.html",
+    "url": "/v/unknown/widgets/viewer/index.html",
     "widgetId": "@gristlabs/widget-viewer",
     "published": true,
     "accessLevel": "read table",

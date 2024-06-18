@@ -7,6 +7,7 @@ declare type TemplateKubeYaml = {
       app: string;
     };
     name: string;
+    annotations: Record<string, string>;
   };
   spec: {
     containers: {

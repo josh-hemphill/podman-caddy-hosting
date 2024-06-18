@@ -16,8 +16,6 @@ spec:
       env:
         - name: HOSTNAME
           value: "{{=env.DOMAIN}}"
-        - name: GRIST_SESSION_SECRET
-          value: "{{=env.GRIST_SESSION_SECRET}}"
         - name: GRIST_SANDBOX_FLAVOR
           value: gvisor
         - name: APP_HOME_URL
@@ -32,10 +30,8 @@ spec:
           value: "_blank"
         - name: GRIST_TELEMETRY_LEVEL
           value: "off"
-        - name: APP_STATIC_INCLUDE_CUSTOM_CSS
-          value: "true"
         - name: GRIST_WIDGET_LIST_URL
-          value: "./widgets/manifest.json"
+          value: "http://{{=env.DOMAIN}}:8484/v/unknown/widgets/manifest.json"
       image: docker.io/gristlabs/grist:latest
       name: grist
       ports:

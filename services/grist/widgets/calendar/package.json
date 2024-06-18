@@ -6,15 +6,18 @@
   "grist": [
     {
       "name": "Calendar",
-      "url": "https://gristlabs.github.io/grist-widget/calendar/index.html",
+      "url": "/v/unknown/widgets/calendar/index.html",
       "widgetId": "@gristlabs/widget-calendar",
       "published": true,
       "accessLevel": "full",
       "renderAfterReady": true,
       "archive": {
-        "domains": ["uicdn.toast.com", "maxcdn.bootstrapcdn.com"],
+        "domains": [
+          "uicdn.toast.com",
+          "maxcdn.bootstrapcdn.com"
+        ],
         "entrypoints": [
-          "https://gristlabs.github.io/grist-widget/calendar/i18n/"
+          "/v/unknown/widgets/calendar/i18n/"
         ]
       }
     }

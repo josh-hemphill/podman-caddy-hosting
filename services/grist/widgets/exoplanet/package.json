@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "grist": {
     "name": "Exoplanet",
-    "url": "https://gristlabs.github.io/grist-widget/exoplanet",
+    "url": "/v/unknown/widgets/exoplanet",
     "widgetId": "@gristlabs/widget-exoplanet",
     "published": false,
     "renderAfterReady": true
